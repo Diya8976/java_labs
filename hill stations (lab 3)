@@ -1,0 +1,59 @@
+
+class HillStations {
+    public void location() {
+        System.out.println("This is a hill station.");
+    }
+    public void famousFor() {
+        System.out.println("It's famous for its scenic beauty.");
+    }
+}
+class Manali extends HillStations {
+    @Override
+    public void location() {
+        System.out.println("Manali is located in Himachal Pradesh, India.");
+    }
+    @Override
+    public void famousFor() {
+        System.out.println("Manali is famous for adventure sports and natural beauty.");
+    }
+}
+class Mussoorie extends HillStations {
+    @Override
+    public void location() {
+        System.out.println("Mussoorie is located in Uttarakhand, India.");
+    }
+
+    @Override
+    public void famousFor() {
+        System.out.println("Mussoorie is famous for its pleasant climate and hilltop views.");
+    }
+}
+class Gulmarg extends HillStations {
+    @Override
+    public void location() {
+        System.out.println("Gulmarg is located in Jammu and Kashmir, India.");
+    }
+    @Override
+    public void famousFor() {
+        System.out.println("Gulmarg is famous for skiing and the world's second-highest operating cable car.");
+    }
+}
+
+public class hill {
+    public static void main(String[] args) {
+        HillStations hillStation1 = new Manali();
+        HillStations hillStation2 = new Mussoorie();
+        HillStations hillStation3 = new Gulmarg();
+        System.out.println("Calling methods using the superclass reference:");
+        hillStation1.location();
+        hillStation1.famousFor();
+        System.out.println("\nCalling methods using the subclass references:");
+        hillStation2.location();
+        hillStation2.famousFor();
+
+        System.out.println();
+
+        hillStation3.location();
+        hillStation3.famousFor();
+    }
+}
